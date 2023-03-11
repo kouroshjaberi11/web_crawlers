@@ -1,0 +1,8 @@
+<div *ngIf="!isStreamer">Error 401</div>
+<div *ngIf="isStreamer">
+  <button id="subscribe" (click)="subscribeToNotifications()">Allow Notifications</button>
+  <button *ngIf="!isStreaming" id="start" (click)="startStream()">
+    Start Stream
+  </button>
+  <div id="video-grid"></div>
+</div>

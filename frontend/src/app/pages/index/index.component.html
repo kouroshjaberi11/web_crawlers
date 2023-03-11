@@ -1,0 +1,22 @@
+<p id="error-box">{{ error }}</p>
+<div *ngIf="isAuth">
+  <div>
+    <button name="action" class="btn" (click)="startStream()">
+      Start Streaming
+    </button>
+  </div>
+</div>
+<form class="complex-form" [formGroup]="streamForm" (submit)="goToStream()">
+  <div class="form-title">Go To Stream</div>
+  <input
+    formControlName="stream"
+    type="text"
+    name="username"
+    class="form-element"
+    placeholder="Stream Id"
+    required
+  />
+  <div>
+    <button id="viewStream" name="action" class="btn">Go To Stream</button>
+  </div>
+</form>

@@ -1,0 +1,29 @@
+<form class="complex-form" [formGroup]="signInForm">
+  <div class="form-title">Sign In</div>
+  <input
+    formControlName="username"
+    type="text"
+    name="username"
+    class="form-element"
+    placeholder="Your username"
+    required
+  />
+  <input
+    formControlName="password"
+    type="password"
+    name="password"
+    class="form-element"
+    placeholder="Your password"
+    required
+  />
+  <div>
+    <button id="signin" name="action" class="btn" (click)="signIn()">
+      Sign in
+    </button>
+  </div>
+  <div>
+    <button id="signup" name="action" class="btn" (click)="signUp()">
+      Sign up
+    </button>
+  </div>
+</form>

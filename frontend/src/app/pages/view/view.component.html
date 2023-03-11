@@ -1,0 +1,20 @@
+<button *ngIf="!isWatching" id="join" (click)="joinStream()">
+  Join Stream
+</button>
+<div id="video-grid"></div>
+<div *ngIf="isWatching">
+  <form class="complex-form" [formGroup]="msgForm" (submit)="sendMessage()">
+    <div class="form-title">Send Message To Streamer</div>
+    <input
+      formControlName="msg"
+      type="text"
+      name="message"
+      class="form-element"
+      placeholder="Enter Your Message Here"
+      required
+    />
+    <div>
+      <button id="sendMsg" name="action" class="btn">Send Message</button>
+    </div>
+  </form>
+</div>
